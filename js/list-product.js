@@ -1,21 +1,22 @@
-const URL = 'http://localhost:3006/item';
+(function () {
+    const URL = 'http://localhost:3006/item';
 
-let products = [];
+    let products = [];
 
-const listProduct = document.querySelector(".catalog__list");
-
-
-
-fetch(URL)
-    .then(response => response.json())
-    .then(response => {
-        const newProducts = response.content;
-        products = products.concat(newProducts);
-        newProducts.forEach(function (product) {
-            const newCard = window.template.renderCardProduct(product);
-            listProduct.insertAdjacentHTML("beforeend", newCard);
-        })
-    }
-    )
-
+    const listProduct = window.searchProduct.listProduct;
+    const onSubmitHeaderForm = window.searchProduct.onSubmitHeaderForm;
+    const renderCatalog = window.template.renderCatalog;
+    
+    fetch(URL)
+        .then(response => response.json())
+        .then(response => {
+            const newProducts = response.content;
+            products = products.concat(newProducts);
+            products.forEach(function (product) {
+                renderCatalog(product, listProduct);
+            })
+            onSubmitHeaderForm(products);
+        }
+        )
+})();
 

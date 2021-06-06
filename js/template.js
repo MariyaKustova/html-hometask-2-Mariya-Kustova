@@ -39,7 +39,12 @@
 </li>`
     };
 
+    const renderCatalog = function (product, place) {
+        const newCard = renderCardProduct(product);
+        place.insertAdjacentHTML("beforeend", newCard);
+    }
+
     window.template = {
-        renderCardProduct
+        renderCatalog
     };
 })();

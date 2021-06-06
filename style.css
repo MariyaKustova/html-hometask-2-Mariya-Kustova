@@ -51,14 +51,19 @@ button:focus {
     position: relative;
 }
 
-.header__svg-search {
+.header__button-submit {
     position: absolute;
     left: 0;
-    top: 7px;   
+    top: -3px;   
 }
 
 .header__svg-search path {
     fill: #323232;
+}
+
+.header__button-submit:focus .header__svg-search path,
+.header__button-submit:hover .header__svg-search path {
+    fill: #E97F03;
 }
 
 .header__input {
@@ -80,8 +85,8 @@ button:focus {
     border-bottom: 2px solid #E97F03;
 }
 
-.header__input:focus + .header__svg-search path,
-.header__input:hover + .header__svg-search path {
+.header__input:focus + .header__button-submit .header__svg-search path,
+.header__input:hover + .header__button-submit .header__svg-search path {
     fill: #E97F03;
 }
 
