@@ -2,14 +2,10 @@
     const renderFavoriteBtn = window.commonTemplate.renderFavoriteBtn;
     const renderCurrency = window.commonTemplate.renderCurrency;
 
-    const renderTemplatePageProduct = function ({name, info, details, picture, price, like}) {
-        return `<div class="product__wrapper-img">
-        <picture>
-            <source media="(max-width: 709.99px)"
-                    srcset="./img/product-adaptive.png" alt=${picture.alt} width="343" height="168">                       
-            <img class="product__img" src="./img/product.png" alt=${picture.alt} width="300" height="300">
-         </picture>
-    </div>
+    const renderTemplatePageProduct = function ({ name, info, details, picture, price, like }) {
+        return `<div class="product__wrapper-img">        
+            <img class="product__img" src="http://localhost:3006/${picture.path}" alt=${picture.alt}>
+             </div>
     <div class="product__wrapper-description">
         <h2 class="product__header-1">${name}</h2>
         <p>${info}</p>

@@ -6,7 +6,7 @@
         return `<li class="catalog__item">
     ${renderFavoriteBtn(like, "catalog__favorite-btn")}
     <a class="catalog__link" href="./product-page.html">
-        <img src="./img/image.png" alt="${picture.alt}" width="220" height="140">
+        <img class="catalog__img" src="http://localhost:3006/${picture.path}" alt="${picture.alt}">
         <h2 class="catalog__header">${name}</h2>
         <p class="catalog__price">${renderCurrency(price.currency)} ${price.value}</p>
     </a>

@@ -146,6 +146,11 @@ button:focus {
     background-color: #f2f2f2;
 }
 
+.catalog__img {
+    display: block;
+    margin: 0 auto;
+}
+
 .catalog__header {
     color: #323232;
     font-size: 18px;
