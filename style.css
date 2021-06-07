@@ -9,11 +9,6 @@ body {
     position: relative;    
 }
 
-img {
-    width: 100%;
-    height: auto;
-  }
-
 button {
     border: none;
     background-color: transparent;
@@ -207,9 +202,6 @@ button:focus {
     height: 300px;
     margin-right: 16px;
     margin-left: 24px;
-
-    background-image: url("./img/product.png");
-    background-repeat: no-repeat;
 }
 
 .product__wrapper-description {
@@ -350,14 +342,19 @@ button:focus {
         margin-right: 0;  
         margin-bottom: 32px;
 
-        background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        background-repeat: no-repeat, no-repeat;
+        background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        background-repeat: no-repeat;
         background-position: center;
-        -webkit-background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        -moz-background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        -o-background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        -khtml-background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        -ms-background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        -webkit-background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        -moz-background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        -o-background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        -khtml-background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        -ms-background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+    }
+
+    .product__img {
+        display: block;
+        margin: 0 auto;
     }
 
     .product__wrapper-description {

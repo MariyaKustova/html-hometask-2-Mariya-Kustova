@@ -2,7 +2,7 @@
     const headerForm = document.querySelector(".header__form");
     const inputSearch = headerForm.querySelector(".header__input");
     const listProduct = document.querySelector(".catalog__list");
-    const renderCatalog = window.template.renderCatalog;
+    const renderCatalog = window.templateIndex.renderCatalog;
 
     const onSubmitHeaderForm = function (products) {
         headerForm.addEventListener("submit", function (evt) {

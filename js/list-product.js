@@ -5,7 +5,8 @@
 
     const listProduct = window.searchProduct.listProduct;
     const onSubmitHeaderForm = window.searchProduct.onSubmitHeaderForm;
-    const renderCatalog = window.template.renderCatalog;
+    const renderCardProduct = window.templateIndex.renderCardProduct;
+    const renderContent = window.commonTemplate.renderContent;
     
     fetch(URL)
         .then(response => response.json())
@@ -13,7 +14,7 @@
             const newProducts = response.content;
             products = products.concat(newProducts);
             products.forEach(function (product) {
-                renderCatalog(product, listProduct);
+                renderContent(renderCardProduct, product, listProduct);
             })
             onSubmitHeaderForm(products);
         }
