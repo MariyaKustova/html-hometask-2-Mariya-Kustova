@@ -1,9 +1,7 @@
-(function () {
-    const renderFavoriteBtn = window.commonTemplate.renderFavoriteBtn;
-    const renderCurrency = window.commonTemplate.renderCurrency;
+import { renderFavoriteBtn, substituteCurrency } from './common-template';
 
-    const renderTemplatePageProduct = function ({ name, info, details, picture, price, like }) {
-        return `<div class="product__wrapper-img">        
+export const renderTemplatePageProduct = function ({ name, info, details, picture, price, like }) {
+    return `<div class="product__wrapper-img">        
             <img class="product__img" src="http://localhost:3006/${picture.path}" alt=${picture.alt}>
              </div>
     <div class="product__wrapper-description">
@@ -13,7 +11,7 @@
         <p>${details}</p>
         <div class="product__wrapper-control">
             <div class="product__flex">
-                <span class="product__price">${renderCurrency(price.currency)} ${price.value}</span>
+                <span class="product__price">${substituteCurrency(price.currency)} ${price.value}</span>
                 <div class="product__wrapper-input">
                     <button class="product__btn-remove" type="button" aria-label="remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -38,9 +36,4 @@
             </div>
         </div>
     </div>`
-    };
-
-    window.templatePageProduct = {
-        renderTemplatePageProduct
-    }
-})();
+};
