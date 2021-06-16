@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "keywords": [],
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "lodash": "^4.17.21",
@@ -34,9 +35,9 @@
   },
   "scripts": {
     "test": "(echo \\ \"Error: not test specified \\\" && exit 1)",
-    "build": "webpack src -d build/js",
+    "build": "cross-env NODE_ENV=prod webpack --mode=production",
     "watch": "babel src -d build/js -w",
-    "webpack": "webpack --mode=development",
+    "webpack": "webpack --mode development",
     "webpack-watch": "webpack --mode=development --watch",
     "start": "webpack server --mode development --open"
   },

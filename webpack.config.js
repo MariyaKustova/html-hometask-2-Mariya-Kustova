@@ -30,7 +30,7 @@ const optimization = () => {
 module.exports = {
     context: path.resolve(__dirname),
     entry: {
-        main: ['@babel/polyfill', './src/index.js']
+        main: ['@babel/polyfill', './src/js/index.js']
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -39,12 +39,12 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.json', '.png'],
         alias: {
-            '@utils': path.resolve(__dirname, 'src/utils')
+            '@js': path.resolve(__dirname, 'src/js')
         }
     },
     optimization: optimization(),
     devServer: {
-        port: 3006
+        port: 3333
     },
     plugins: [
         new HTMLWebpackPlugin({
