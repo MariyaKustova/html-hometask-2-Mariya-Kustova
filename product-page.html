@@ -15,15 +15,19 @@
     <h1 class="visually-hidden">Product</h1>
     <header class="header">
         <div class="header__flex-wrapper">
-            <label class="header__label">
-                <input class="header__input" type="text" placeholder="Search products" />
-                <svg class="header__svg-search" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
-                        fill="none" />
-                </svg>
-            </label>
+            <form class="header__form" method="POST">
+                <label class="header__label">
+                    <input class="header__input" type="text" placeholder="Search products" />
+                    <button class="header__button-submit" type="submit">
+                        <svg class="header__svg-search" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
+                                fill="none" />
+                        </svg>
+                    </button>
+                </label>
+            </form>
             <div class="header__flex-wrapper wrapper-button">
                 <button class="header__btn" type="button">
                     <svg class="header__svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -45,61 +49,15 @@
         </div>
     </header>
     <main>
-        <section class="product">
-            <div class="product__wrapper-img"></div>
-            <div class="product__wrapper-description">
-                <h2 class="product__header-1">G Home</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices ante sit amet mollis luctus.
-                    Morbi semper, tellus in finibus tristique, purus odio sodales sem, vitae dignissim enim metus vel
-                    purus. Quisque a rutrum leo. Phasellus quis ex sed magna finibus convallis varius luctus justo.
-                    Nullam et sapien vel magna ultrices pulvinar. Nunc felis ante, lobortis eget imperdiet in, iaculis
-                    at justo. Etiam libero nisl, hendrerit vitae ultricies vitae, pharetra a est. Vivamus vestibulum
-                    quam sit amet facilisis consequat. Curabitur sollicitudin arcu arcu, pretium aliquam nibh hendrerit
-                    a. Donec diam massa, tempus sed pulvinar a, fermentum et orci.</p>
-                <h3 class="product__header-2">Details</h3>
-                <p>Nulla et mauris sed elit semper pretium a quis augue. Fusce tempus est ex, eu porttitor nulla auctor
-                    et. Maecenas eget quam non risus porta elementum. Pellentesque posuere augue in malesuada fermentum.
-                    Maecenas vitae viverra mauris. Suspendisse a cursus libero. Pellentesque vitae purus eget lectus
-                    lobortis laoreet sed sollicitudin diam. Pellentesque pellentesque eu justo at ullamcorper. Quisque
-                    quis egestas magna. Vestibulum et felis id nisi dapibus viverra vel vitae nisl. Morbi lobortis nunc
-                    turpis, sed tincidunt quam cursus nec. Morbi eget lorem dolor.</p>
-                <div class="product__wrapper-control">
-                    <div class="product__flex">
-                        <span class="product__price">$129</span>
-                        <div class="product__wrapper-input">
-                            <button class="product__btn-remove" type="button" aria-label="remove">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 13H5V11H19V13Z" fill="#E97F03" />
-                                </svg>
-                            </button>
-                            <label>
-                                <input type="number" value="1" name="count" min="0" />
-                            </label>
-                            <button class="product__btn-add" type="button" aria-label="add">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#E97F03" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product__flex">
-                        <button class="product__add-button" type="button" aria-label="add to cart">Add to cart</button>
-                        <button type="button" class="product__favorite-btn favorite-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z"
-                                    fill="none" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
+        <section class="product">            
         </section>
     </main>
     <footer></footer>
+
+    <script src="./js/common-template.js"></script>
+    <script src="./js/template-product-page.js"></script>
+    <script src="./js/button-add-remove.js"></script>
+    <script src="./js/product-page.js"></script>    
 </body>
 
 </html>

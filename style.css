@@ -9,11 +9,6 @@ body {
     position: relative;    
 }
 
-img {
-    width: 100%;
-    height: auto;
-  }
-
 button {
     border: none;
     background-color: transparent;
@@ -51,14 +46,19 @@ button:focus {
     position: relative;
 }
 
-.header__svg-search {
+.header__button-submit {
     position: absolute;
     left: 0;
-    top: 7px;   
+    top: -3px;   
 }
 
 .header__svg-search path {
     fill: #323232;
+}
+
+.header__button-submit:focus .header__svg-search path,
+.header__button-submit:hover .header__svg-search path {
+    fill: #E97F03;
 }
 
 .header__input {
@@ -80,8 +80,8 @@ button:focus {
     border-bottom: 2px solid #E97F03;
 }
 
-.header__input:focus + .header__svg-search path,
-.header__input:hover + .header__svg-search path {
+.header__input:focus + .header__button-submit .header__svg-search path,
+.header__input:hover + .header__button-submit .header__svg-search path {
     fill: #E97F03;
 }
 
@@ -124,7 +124,7 @@ button:focus {
     flex: 0 0 220px;
     height: 272px;
     margin: 0 8px 16px 8px;  
-    padding-top: 30px;
+    padding: 30px 16px 16px;
 
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -144,6 +144,11 @@ button:focus {
 .catalog__item:focus {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
     background-color: #f2f2f2;
+}
+
+.catalog__img {
+    display: block;
+    margin: 0 auto;
 }
 
 .catalog__header {
@@ -202,9 +207,6 @@ button:focus {
     height: 300px;
     margin-right: 16px;
     margin-left: 24px;
-
-    background-image: url("./img/product.png");
-    background-repeat: no-repeat;
 }
 
 .product__wrapper-description {
@@ -345,14 +347,19 @@ button:focus {
         margin-right: 0;  
         margin-bottom: 32px;
 
-        background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        background-repeat: no-repeat, no-repeat;
+        background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        background-repeat: no-repeat;
         background-position: center;
-        -webkit-background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        -moz-background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        -o-background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        -khtml-background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        -ms-background-image: url("./img/product-adaptive.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        -webkit-background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        -moz-background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        -o-background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        -khtml-background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        -ms-background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+    }
+
+    .product__img {
+        display: block;
+        margin: 0 auto;
     }
 
     .product__wrapper-description {
